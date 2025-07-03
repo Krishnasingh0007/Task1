@@ -4,6 +4,7 @@ TO-DO LIST
 from tkinter import *
 from tkinter import messagebox
 import sqlite3 as sql
+
 def add_task():  
     task_string = task_field.get().strip()  
     if len(task_string) == 0:  
