@@ -108,3 +108,71 @@ if __name__ == "__main__":
     list_update()    
     guiWindow.mainloop()
 
+# Task2 
+Calculator 
+
+def calculator():
+    print("Simple Calculator")
+    print("------------------")
+    print("Operations: +, -, *, /")
+
+    try:
+        num1 = float(input("Enter first number: "))
+        operator = input("Enter operation (+, -, *, /): ")
+        num2 = float(input("Enter second number: "))
+
+        if operator == '+':
+            result = num1 + num2
+            print(f"Result: {num1} + {num2} = {result}")
+        elif operator == '-':
+            result = num1 - num2
+            print(f"Result: {num1} - {num2} = {result}")
+        elif operator == '*':
+            result = num1 * num2
+            print(f"Result: {num1} * {num2} = {result}")
+        elif operator == '/':
+            if num2 == 0:
+                print("Error: Division by zero is not allowed.")
+            else:
+                result = num1 / num2
+                print(f"Result: {num1} / {num2} = {result}")
+        else:
+            print("Invalid operator. Please use +, -, *, or /.")
+    
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+
+if _name_ == "_main_":
+    calculator()
+
+#  Task3
+Password Generator 
+
+import random
+import string
+
+def generate_password():
+    print("Password Generator")
+    print("------------------")
+
+    try:
+        length = int(input("Enter desired password length: "))
+        if length < 4:
+            print("Password length should be at least 4 characters.")
+            return
+
+        # Character sets
+        all_chars = string.ascii_letters + string.digits + string.punctuation
+
+        # Random password generation
+        password = ''.join(random.choice(all_chars) for _ in range(length))
+        print(f"Generated Password: {password}")
+
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+
+if _name_ == "_main_":
+    generate_password()
+
+
+
